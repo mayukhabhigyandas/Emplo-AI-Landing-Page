@@ -162,7 +162,7 @@ const Signup = ({ switchToLogin }: SignupProps) => {
           )}
         />
 
-        <FormField
+        {/* <FormField
           control={form.control}
           name="userType"
           render={({ field }) => (
@@ -185,7 +185,7 @@ const Signup = ({ switchToLogin }: SignupProps) => {
               <FormMessage />
             </FormItem>
           )}
-        />
+        /> */}
 
         <Button type="submit" className="w-full" disabled={isLoading}>
           {isLoading ? "Creating account..." : "Create Account"}
