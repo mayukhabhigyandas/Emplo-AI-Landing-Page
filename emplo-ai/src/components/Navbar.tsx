@@ -66,9 +66,9 @@ const Navbar = () => {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuItem onClick={() => navigate("/profile")}>
+                  {/* <DropdownMenuItem onClick={() => navigate("/profile")}>
                     <User className="h-4 w-4" /> Profile
-                  </DropdownMenuItem>
+                  </DropdownMenuItem> */}
                   <DropdownMenuItem
                     className="text-destructive"
                     onClick={handleSignOut}
