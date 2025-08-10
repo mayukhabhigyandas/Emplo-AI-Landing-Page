@@ -31,7 +31,7 @@ __pycache__/
 *.so
 
 # Ignore virtual environments
-Python_Backend/config/
+
 venv/
 env/
 .env/
@@ -39,7 +39,6 @@ env/
 *.env
 **/.env
 **/*.env
-config.py
 
 
 # Environment variables
