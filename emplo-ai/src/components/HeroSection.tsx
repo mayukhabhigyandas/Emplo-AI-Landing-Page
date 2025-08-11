@@ -1,44 +1,79 @@
-// import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-workspace.jpg';
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen pt-24 pb-16 px-6">
+    <section className="min-h-[85vh] pt-20 pb-4 px-6"> {/* Increased pt to 20, kept pb at 4 */}
       <div className="w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {/* Stats Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full">
+            <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-0">
               <span className="text-primary font-medium text-sm">
-                ✓ 15,346 AI interviews conducted
+                AI Agent Recruiter
               </span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl lg:text-6xl font-bold text-emplo-dark leading-tight font-inter">
-              Your AI agent for{' '}
-              <span className="text-emplo-dark">recruitment & talent assessment</span>
+            <h1 className="text-5xl lg:text-6xl font-bold text-emplo-dark leading-tight font-inter mb-0">
+              The{' '}
+              <span className="font-extrabold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+                Wise
+              </span>{' '}
+              Way To Hire
             </h1>
 
             {/* Description */}
-            <p className="text-lg text-emplo-gray leading-relaxed max-w-lg font-inter">
-              Emplo AI is your autonomous AI agent for everything related to recruitment & talent
-              assessment. Go from thinking about the job title to rolling out an offer with few clicks.
-              Get detailed report on
+            <p className="text-lg text-emplo-gray leading-relaxed max-w-lg font-inter mb-0">
+              Streamline your recruitment process with our AI-powered platform. From resume parsing to automated interviews, we're redefining hiring efficiency.
             </p>
 
-            {/* AI Recommendation */}
-            <p className="text-primary font-medium font-inter">AI recommendation</p>
-
-            {/* CTA Button */}
-            {/* <Link
-              to="/schedule"
-              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-medium rounded-lg rounded-md"
-            >
-              Start Pilot
-            </Link> */}
+            {/* Features/Benefits List */}
+            <ul className="space-y-4 max-w-md font-inter text-emplo-dark mb-0">
+              <li className="flex items-center space-x-3">
+                <svg
+                  className="w-6 h-6 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Cut recruitment costs 70%</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <svg
+                  className="w-6 h-6 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Less manual work, more automation</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <svg
+                  className="w-6 h-6 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Reduce Time-to-Hire</span>
+              </li>
+            </ul>
           </div>
 
           {/* Right Image */}
