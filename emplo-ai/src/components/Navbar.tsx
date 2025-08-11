@@ -76,6 +76,11 @@ const Navbar = () => {
                     <LogOut className="h-4 w-4" /> Logout
                   </DropdownMenuItem>
                 </DropdownMenuContent>
+                 <Link to="/schedule">
+              <Button className="bg-black hover:bg-gray-800 text-white px-6 py-2.5 rounded-full text-sm font-light shadow-sm hover:shadow-md transition-all duration-200 font-space-grotesk">
+                Start Pilot
+              </Button>
+            </Link>
               </DropdownMenu>
             ) : (
               <DropdownMenu>
@@ -96,7 +101,13 @@ const Navbar = () => {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
+              
             )}
+             <Link to="/schedule">
+              <Button className="bg-black hover:bg-gray-800 text-white px-6 py-2.5 rounded-full text-sm font-light shadow-sm hover:shadow-md transition-all duration-200 font-space-grotesk">
+                Start Pilot
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
