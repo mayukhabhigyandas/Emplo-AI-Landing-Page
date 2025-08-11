@@ -126,7 +126,7 @@ const Navbar = () => {
           <div className="md:hidden mt-4 space-y-2">
             {user ? (
               <>
-                <Button
+                {/* <Button
                   variant="outline"
                   className="w-full justify-start"
                   onClick={() => {
@@ -135,7 +135,7 @@ const Navbar = () => {
                   }}
                 >
                   <User className="mr-2 h-4 w-4" /> Profile
-                </Button>
+                </Button> */}
                 <Button
                   variant="outline"
                   className="w-full justify-start text-destructive"
