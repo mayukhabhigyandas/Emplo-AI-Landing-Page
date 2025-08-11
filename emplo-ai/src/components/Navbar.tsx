@@ -103,11 +103,11 @@ const Navbar = () => {
               </DropdownMenu>
               
             )}
-             <Link to="/schedule">
+             {/* <Link to="/schedule">
               <Button className="bg-black hover:bg-gray-800 text-white px-6 py-2.5 rounded-full text-sm font-light shadow-sm hover:shadow-md transition-all duration-200 font-space-grotesk">
                 Start Pilot
               </Button>
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile Menu Button */}
