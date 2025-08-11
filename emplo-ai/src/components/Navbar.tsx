@@ -54,61 +54,60 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu shifted further left */}
-          <div className="hidden md:flex items-center space-x-4 mr-12"> {/* mr-12 = 3rem margin right */}
-            {user ? (
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline" className="flex items-center gap-2">
-                    <Avatar className="h-6 w-6">
-                      <AvatarFallback>{getInitials()}</AvatarFallback>
-                    </Avatar>
-                    <ChevronDown className="h-4 w-4" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  {/* <DropdownMenuItem onClick={() => navigate("/profile")}>
-                    <User className="h-4 w-4" /> Profile
-                  </DropdownMenuItem> */}
-                  <DropdownMenuItem
-                    className="text-destructive"
-                    onClick={handleSignOut}
-                  >
-                    <LogOut className="h-4 w-4" /> Logout
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-                 <Link to="/schedule">
-              <Button className="bg-black hover:bg-gray-800 text-white px-6 py-2.5 rounded-full text-sm font-light shadow-sm hover:shadow-md transition-all duration-200 font-space-grotesk">
-                Start Pilot
-              </Button>
-            </Link>
-              </DropdownMenu>
-            ) : (
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button
-                    variant="ghost"
-                    className="text-sm font-light text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200 font-space-grotesk"
-                  >
-                    Log In
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-48 rounded-xl shadow-lg bg-white/85 backdrop-blur-sm z-50">
-                  <DropdownMenuItem onClick={() => navigate("/schedule")}>
-                    Employer 
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => navigate("/auth?role=jobseeker")}>
-                    Job Seeker
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-              
-            )}
-             {/* <Link to="/schedule">
-              <Button className="bg-black hover:bg-gray-800 text-white px-6 py-2.5 rounded-full text-sm font-light shadow-sm hover:shadow-md transition-all duration-200 font-space-grotesk">
-                Start Pilot
-              </Button>
-            </Link> */}
-          </div>
+          <div className="hidden md:flex items-center space-x-4 mr-12">
+  {user ? (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" className="flex items-center gap-2">
+          <Avatar className="h-6 w-6">
+            <AvatarFallback>{getInitials()}</AvatarFallback>
+          </Avatar>
+          <ChevronDown className="h-4 w-4" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        {/* Uncomment if profile link needed
+        <DropdownMenuItem onClick={() => navigate("/profile")}>
+          <User className="h-4 w-4" /> Profile
+        </DropdownMenuItem>
+        */}
+        <DropdownMenuItem
+          className="text-destructive"
+          onClick={handleSignOut}
+        >
+          <LogOut className="h-4 w-4" /> Logout
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  ) : (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button
+          variant="ghost"
+          className="text-sm font-light text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200 font-space-grotesk"
+        >
+          Log In
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-48 rounded-xl shadow-lg bg-white/85 backdrop-blur-sm z-50">
+        <DropdownMenuItem onClick={() => navigate("/schedule")}>
+          Employer
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => navigate("/auth?role=jobseeker")}>
+          Job Seeker
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  )}
+  
+  {/* Start Pilot button shown always */}
+  <Link to="/schedule">
+    <Button className="bg-black hover:bg-gray-800 text-white px-6 py-2.5 rounded-full text-sm font-light shadow-sm hover:shadow-md transition-all duration-200 font-space-grotesk">
+      Start Pilot
+    </Button>
+  </Link>
+</div>
+
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
