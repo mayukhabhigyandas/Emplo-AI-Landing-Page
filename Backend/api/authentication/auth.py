@@ -11,12 +11,20 @@ from api.authentication.models import ProfileWithToken, ProfileUpdate, LoginRequ
 from config import JWT_SECRET, JWT_ALGORITHM, ACCESS_TOKEN_EXPIRE_MINUTES
 import logging
 from bson import ObjectId
+from pymongo import ASCENDING
 
 router = APIRouter()
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
 logger = logging.getLogger(__name__)
+
+async def init_indexes():
+    await profiles_collection.create_index(
+        [("email", ASCENDING)],
+        unique=True,
+        name="email_index"
+    )
 
 def create_access_token(data: dict, expires_delta: timedelta | None = None):
     to_encode = data.copy()
