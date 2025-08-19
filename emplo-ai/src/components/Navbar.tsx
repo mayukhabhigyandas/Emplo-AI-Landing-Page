@@ -43,10 +43,10 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="w-full px-8 py-4"> {/* Increased horizontal padding from px-6 to px-8 */}
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-4"> {/* Increased horizontal padding from px-6 to px-8 */}
         <div className="flex items-center justify-between">
           {/* Logo shifted further right */}
-          <Link to="/" className="flex items-center space-x-2 ml-12"> {/* ml-12 = 3rem margin left */}
+          <Link to="/" className="flex items-center space-x-2 ml-0 lg:ml-12"> {/* ml-12 = 3rem margin left */}
             <img src="/image.png" alt="Emplo AI logo" className="w-8 h-8 rounded" />
             <span className="text-xl font-light text-foreground font-space-grotesk">
               Emplo AI
@@ -54,7 +54,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu shifted further left */}
-          <div className="hidden md:flex items-center space-x-4 mr-12">
+          <div className="hidden md:flex items-center space-x-4 mr-0 lg:mr-12">
   {user ? (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

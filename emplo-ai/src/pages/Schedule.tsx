@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navbar from '@/components/Navbar';
 import { CalendarClock } from 'lucide-react';
 
+
 const Schedule = () => {
   useEffect(() => {
     const script = document.createElement("script");
@@ -16,7 +17,7 @@ const Schedule = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="bg-[#f6f7fb] min-h-screen pt-16 pb-16 px-4">
         <div className="max-w-5xl mx-auto flex flex-col items-center text-center gap-6">
           <div className="w-14 h-14 rounded-lg bg-transparent border-2 border-primary text-primary flex items-center justify-center">

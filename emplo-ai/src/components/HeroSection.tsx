@@ -1,16 +1,17 @@
 import { Link } from 'react-router-dom';
+import { Check } from 'lucide-react';
 import heroImage from '@/assets/hero-workspace.jpg';
 
 const HeroSection = () => {
   return (
-    <section className="min-h-[85vh] pt-20 pb-4 px-6"> {/* Increased pt to 20, kept pb at 4 */}
+    <section className="min-h-[70vh] pt-20 pb-0 px-4 sm:px-6 lg:px-20">
       <div className="w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
             {/* Stats Badge */}
             <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-0">
-              <span className="text-primary font-medium text-sm">
+              <span className="text-primary font-medium text-sm font-inter">
                 AI Agent Recruiter
               </span>
             </div>
@@ -32,45 +33,15 @@ const HeroSection = () => {
             {/* Features/Benefits List */}
             <ul className="space-y-4 max-w-md font-inter text-emplo-dark mb-0">
               <li className="flex items-center space-x-3">
-                <svg
-                  className="w-6 h-6 text-primary"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
+                <Check className="w-6 h-6 text-primary" strokeWidth={2} />
                 <span>Cut recruitment costs 70%</span>
               </li>
               <li className="flex items-center space-x-3">
-                <svg
-                  className="w-6 h-6 text-primary"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
+                <Check className="w-6 h-6 text-primary" strokeWidth={2} />
                 <span>Less manual work, more automation</span>
               </li>
               <li className="flex items-center space-x-3">
-                <svg
-                  className="w-6 h-6 text-primary"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
+                <Check className="w-6 h-6 text-primary" strokeWidth={2} />
                 <span>Reduce Time-to-Hire</span>
               </li>
             </ul>
@@ -83,6 +54,7 @@ const HeroSection = () => {
                 src={heroImage}
                 alt="Team collaboration workspace"
                 className="w-full h-auto object-cover"
+                loading="eager"
               />
             </div>
           </div>

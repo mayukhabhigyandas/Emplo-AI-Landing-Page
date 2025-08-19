@@ -6,12 +6,12 @@ const ExploreSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="pt-8 pb-12 px-6 bg-background">
+    <section className="pt-4 pb-12 bg-background px-4 sm:px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Content - Before/After Card */}
           <div className="relative group">
-            <div className="bg-gradient-to-br from-emplo-purple to-emplo-purple-light rounded-3xl p-8 shadow-2xl">
+            <div className="bg-gradient-emplo rounded-3xl p-8 shadow-2xl">
               <div className="grid grid-cols-2 gap-6">
                 {/* Before */}
                 <div className="relative cursor-pointer group-hover:scale-105 transform transition-transform duration-300 ease-in-out">
@@ -24,7 +24,7 @@ const ExploreSection = () => {
                     />
                   </div>
                   <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-white text-emplo-dark px-4 py-2 rounded-full text-sm font-medium shadow-lg select-none">
+                    <span className="bg-white text-emplo-dark px-4 py-2 rounded-full text-sm font-medium shadow-lg select-none font-inter">
                       Before
                     </span>
                   </div>
@@ -34,14 +34,14 @@ const ExploreSection = () => {
                 <div className="relative cursor-pointer group-hover:scale-105 transform transition-transform duration-300 ease-in-out">
                   <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
                     <img
-                      src="/lovable-uploads/206a0543-1891-4b3d-bded-7321dd79ff26.png" // Replace with actual after image
+                      src="/lovable-uploads/206a0543-1891-4b3d-bded-7321dd79ff26.png" 
                       alt="After - AI-powered recruitment"
                       className="w-full h-48 object-cover"
                       loading="lazy"
                     />
                   </div>
                   <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-white text-emplo-dark px-4 py-2 rounded-full text-sm font-medium shadow-lg select-none">
+                    <span className="bg-white text-emplo-dark px-4 py-2 rounded-full text-sm font-medium shadow-lg select-none font-inter">
                       After
                     </span>
                   </div>
@@ -52,7 +52,7 @@ const ExploreSection = () => {
 
           {/* Right Content */}
           <div className="space-y-4">
-            <h2 className="text-4xl lg:text-5xl font-bold text-emplo-dark leading-tight font-inter">
+            <h2 className="text-4xl lg:text-5xl font-bold text-emplo-dark leading-snug lg:leading-normal font-inter">
               Explore the Future of Recruitment with Emplo AI
             </h2>
 
